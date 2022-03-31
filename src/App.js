@@ -5,9 +5,9 @@ import PostList from './Components/PostList';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      
         <PostList/>
-      </header>
+      
     </div>
   );
 }

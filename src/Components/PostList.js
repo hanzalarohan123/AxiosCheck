@@ -14,8 +14,12 @@ class PostList extends Component {
         axios.get('https://jsonplaceholder.typicode.com/posts').then(result =>this.setState={post:result.data}).catch(error =>{console.log(error)})
     }
   render() {
+    const{post} = this.state
     return (
-      <div>PostList{this.state.post}</div>
+      <div>
+        {post.length ?
+        post.map(pos=><div key={pos.id}>{pos.title}</div>):null}
+      </div>
     )
   }
 }
